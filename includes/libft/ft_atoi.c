@@ -6,7 +6,7 @@
 /*   By: mrharoui <mrharoui@student.42.fr>        d8     88      a88          */
 /*                                              8888888888888  a8P            */
 /*   Created: 2022/11/08 11:13:08 by mrharoui            88   d88             */
-/*   Updated: 2023/05/28 14:07:25 by mrharoui            88   88888888888     */
+/*   Updated: 2023/07/06 21:41:13 by mrharoui            88   88888888888     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	ft_atoi(const char *str)
 	while (str[i] && str[i] != ' ' && str[i] != '\n' && str[i] != '\t')
 	{
 		if (str[i] == '-')
-			ft_putchar('-');
+		{
+			write(1, "-", 1);
+		}
 		else if (str[i] >= '0' && str[i] <= '9')
 		{
 			result = result * 10 + str[i] - '0';

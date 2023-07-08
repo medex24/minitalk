@@ -1,12 +1,12 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 15:51:00 by mrharoui          #+#    #+#             */
-/*   Updated: 2023/07/05 02:09:45 by mehdi            ###   ########.fr       */
+/*                                                       d8    ad888888b      */
+/*                                                     d888   d88    888      */
+/*   libft.h                                         d8  88         a88       */
+/*                                                  d8   88        d88        */
+/*   By: mrharoui <mrharoui@student.42.fr>        d8     88      a88          */
+/*                                              8888888888888  a8P            */
+/*   Created: 2022/10/30 15:51:00 by mrharoui            88   d88             */
+/*   Updated: 2023/07/06 21:36:12 by mrharoui            88   88888888888     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isprint(int print);
 int		ft_isalnum(int alpha);
 int		ft_isalpha(int ltr);
 int		ft_isascii(int ascii);
+void	ft_putchar(char c);
 int		ft_isdigit(int nb);
 size_t	ft_strlen(const char *str);
 int		ft_toupper(int ltr);
@@ -60,7 +61,6 @@ void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 char	**ft_split(char const *s);
 int		ft_atoi(const char *str);
-void	ft_putchar(char c);
 
 
 #endif

@@ -4,20 +4,17 @@ CFLAGS				=	-Wall -Werror -Wextra
 
 ##################################################
 ################## SOURCES #######################
-SERVER				=	server
+SERVER				=	./src/server
 SERVER_SRC			=	./src/server.c
 
 
-CLIENT				=	client
+CLIENT				=	./src/client
 CLIENT_SRC			=	./src/client.c
 
 ##################################################
 #####################INCLUDE######################
 LIBFT				=	libft.a
 LIBFT_SRC			=	./includes/libft/
-
-FT_PRINTF			=	libftprintf.a
-FT_PRINTF_SRC		=	./includes/printf/
 
 ##################### COLORS #####################
 
@@ -33,26 +30,18 @@ RESET           =   \033[0m
 ##################################################
 ################## RULES #########################
 
-all:		$(LIBFT) $(SERVER) $(CLIENT) $(FT_PRINTF)
+all:		$(LIBFT) $(SERVER) $(CLIENT)
 			@printf "$(CYAN)Compilation MINITALK terminé ✅\n$(RESET)"
 
 $(LIBFT):
 			@make -C $(LIBFT_SRC)
 
-# $(FT_PRINTF):
-# 			@make -C $(FT_PRINTF_SRC)
-
-$(FT_PRINTF): 		$(FT_PRINTF_SRC)*.c
-					$(CC) $(CFLAGS) -c $(FT_PRINTF_SRC)*.c -o $(FT_PRINTF_SRC)*.o
-					ar rcs $(FT_PRINTF_SRC)$(FT_PRINTF) $(FT_PRINTF_SRC)*.o
-					$(RM) $(FT_PRINTF_SRC)*.o
-
 $(SERVER):			$(SERVER_SRC)
-					$(CC) $(CFLAGS) $(SERVER_SRC) $(FT_PRINTF_SRC)$(FT_PRINTF) $(LIBFT_SRC)$(LIBFT) -o $(SERVER)
+					$(CC) $(CFLAGS) $(SERVER_SRC) $(LIBFT_SRC)$(LIBFT) -o $(SERVER)
 					@printf "$(GREEN)Server compiled ✅\n\n$(RESET)"
 
 $(CLIENT):			$(CLIENT_SRC)
-					$(CC) $(CFLAGS) $(CLIENT_SRC) $(FT_PRINTF_SRC)$(FT_PRINTF) $(LIBFT_SRC)$(LIBFT) -o $(CLIENT)
+					$(CC) $(CFLAGS) $(CLIENT_SRC) $(LIBFT_SRC)$(LIBFT) -o $(CLIENT)
 					@printf "$(GREEN)Client compiled ✅\n\n$(RESET)"
 
 clean:
@@ -60,7 +49,7 @@ clean:
 			@printf "$(RED)minitalk deleted 🗑️\n$(RESET)"
 
 fclean:		clean
-			@make -C libft fclean
+			@make -C ./includes/libft fclean
 
 re:			fclean all
 			@printf "$(CYAN)Minitalk recompiled 🔄\n$(RESET)"

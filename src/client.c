@@ -1,12 +1,12 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 17:32:47 by mrharoui          #+#    #+#             */
-/*   Updated: 2023/07/05 01:28:40 by mehdi            ###   ########.fr       */
+/*                                                       d8    ad888888b      */
+/*                                                     d888   d88    888      */
+/*   client.c                                        d8  88         a88       */
+/*                                                  d8   88        d88        */
+/*   By: mrharoui <mrharoui@student.42.fr>        d8     88      a88          */
+/*                                              8888888888888  a8P            */
+/*   Created: 2023/05/07 17:32:47 by mrharoui            88   d88             */
+/*   Updated: 2023/07/07 00:15:05 by mrharoui            88   88888888888     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_send_bit(pid_t server_pid, char *str)
 }
 
 int	main(int argc, char *argv[])
-{	
+{
 	server_pid = ft_atoi(argv[1]); // QUAND J'ENLEVE CETTE PARTIE DU CODE SA ME SORT USER=DEFINED SIGNAL 2
 	// utiliser atoi pour convertir le argv[1] en int
 	if (argc != 3)
@@ -70,11 +70,11 @@ int	main(int argc, char *argv[])
 	else if (argc == 3)
 	{
 		ft_send_lenght(argv[2]);
-		while (*argv[2] != '\0')
-		{
-			ft_send_bit(server_pid, argv[2]);
-			argv[2]++;
-		}
+		// while (*argv[2] != '\0')
+		// {
+		// 	ft_send_bit(server_pid, argv[2]);
+		// 	argv[2]++;
+		// }
 	}
 	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 17:30:38 by mrharoui          #+#    #+#             */
-/*   Updated: 2023/07/05 23:11:30 by mehdi            ###   ########.fr       */
+/*                                                       d8    ad888888b      */
+/*                                                     d888   d88    888      */
+/*   minitalk.h                                      d8  88         a88       */
+/*                                                  d8   88        d88        */
+/*   By: mrharoui <mrharoui@student.42.fr>        d8     88      a88          */
+/*                                              8888888888888  a8P            */
+/*   Created: 2023/05/07 17:30:38 by mrharoui            88   d88             */
+/*   Updated: 2023/07/06 21:28:04 by mrharoui            88   88888888888     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../includes/libft/libft.h"
-# include "../includes/printf/ft_printf.h"
 
 
 int		ft_atoi(const char *str);
